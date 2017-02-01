@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "danimemory",
+  "short_name": "dmemo",
+  "description": "play danime and memory them history via twitter",
+  "version": "0.0.1",
+  "permissions": [
+    "https://api.twitter.com/"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://anime.dmkt-sp.jp/animestore/sc_d_pc?partId=*"
+      ],
+      "js": [
+        "js/libraries/jquery-3.1.1.min.js",
+        "js/libraries/twitter.js",
+        "js/libraries/codebird.js",
+        "js/content_scripts/danime.js"
+      ]
+    }
+  ]
+}
